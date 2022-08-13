@@ -1,0 +1,273 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap");
+
+/* ##   VARIABLES */
+:root {
+  --font: "Space Mono", monospace;
+  --color-strong-cyan: hsl(172, 67%, 45%);
+  --color-dark-cyan: hsl(183, 100%, 15%);
+  --color-dark-gray-cyan: hsl(186, 14%, 43%);
+  --color-gray-cyan: hsl(184, 14%, 56%);
+  --color-light-gray-cyan: hsl(185, 41%, 84%);
+  --color-very-light-gray-cyan: hsl(189, 41%, 97%);
+  --color-white: hsl(0, 0%, 100%);
+  --debug-red: 1px solid red;
+  --debug-blue: 1px solid blue;
+}
+
+/* ##   General Reset */
+html {
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+  font-size: 10px;
+  font-family: var(--font);
+  font-weight: 700;
+}
+
+/* ##   Experimenting with Mobile First Design */
+/* 320px */
+body {
+  padding-top: 2rem;
+  background-color: var(--color-light-gray-cyan);
+}
+
+input {
+  background-color: var(--color-very-light-gray-cyan);
+  border: none;
+  border-radius: 0.5rem;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: var(--color-dark-cyan);
+}
+
+input:focus {
+  outline: none;
+  border: 2px solid var(--color-strong-cyan);
+}
+
+input:invalid {
+  border: 0.2rem solid rgba(255, 0, 0, 0.45);
+}
+
+header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+header h1 {
+  font-size: 1.8rem;
+}
+
+.container {
+  max-width: 350px;
+  width: 100%;
+  margin: auto;
+  padding: 2rem 3rem;
+  border-radius: 1rem;
+  background-color: var(--color-white);
+}
+
+/* ##   Input and Tips selection section */
+
+/* ##   Bill Input Area */
+.bill-label {
+  position: relative;
+  font-size: 1.2rem;
+}
+
+.bill-input {
+  display: block;
+  width: 100%;
+  height: 3.5rem;
+  padding-right: 1rem;
+  margin-top: 0.5rem;
+}
+
+.bill-input::-webkit-inner-spin-button {
+  appearance: none;
+}
+
+.bill-label img {
+  position: absolute;
+  top: 55%;
+  left: 5%;
+  width: 0.9rem;
+}
+
+.bill-label span {
+  color: rgba(255, 0, 0, 0.8);
+  letter-spacing: -0.01rem;
+  padding-left: 17.5rem;
+}
+
+.bill-input::placeholder {
+  font-size: 1.5rem;
+  color: var(--color-dark-cyan);
+}
+
+/* ##   Tip selection buttons */
+.tip-buttons {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+.tip-buttons p {
+  font-size: 1.2rem;
+}
+.selection-btns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin-top: 0.5rem;
+}
+.selection-btns button,
+.custom {
+  width: 100%;
+  height: 3.5rem;
+}
+
+.selection-btns button {
+  background-color: var(--color-dark-cyan);
+  border: none;
+  color: var(--color-white);
+  font-size: 2rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+
+.selection-btns button:hover {
+  background-color: var(--color-light-gray-cyan);
+  color: var(--color-dark-cyan);
+}
+
+.custom {
+  padding-right: 1rem;
+  font-size: 1.5rem;
+  letter-spacing: 1.5px;
+}
+
+.custom::placeholder {
+  color: var(--color-dark-cyan);
+}
+
+.custom::-webkit-inner-spin-button {
+  appearance: none;
+}
+
+/* ##   Sharers */
+.sharers {
+  position: relative;
+  font-size: 1.2rem;
+}
+
+.sharers-input {
+  display: block;
+  width: 100%;
+  height: 3.5rem;
+  padding-right: 1rem;
+  margin-top: 0.5rem;
+}
+
+.sharers-input::-webkit-inner-spin-button {
+  appearance: none;
+}
+
+.sharers-input::placeholder {
+  font-size: 1.5rem;
+  color: var(--color-dark-cyan);
+}
+
+.sharers img {
+  position: absolute;
+  top: 60%;
+  left: 5%;
+  width: 0.9rem;
+}
+
+.sharers span {
+  color: rgba(255, 0, 0, 0.8);
+  letter-spacing: -0.01rem;
+  padding-left: 8.5rem;
+}
+
+/* ##   Totals Section  ## */
+.totals {
+  margin-top: 2rem;
+  padding: 2rem;
+  border-radius: 0.5rem;
+  background-color: var(--color-dark-cyan);
+}
+
+.tip-per-person,
+.total-per-person {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 1.5rem;
+}
+
+.calc-title p {
+  color: var(--color-white);
+}
+
+.calc-title p:first-of-type {
+  font-size: 1.2rem;
+}
+.calc-title p:last-of-type {
+  color: var(--color-gray-cyan);
+}
+
+.calc-amount {
+  font-size: 2.5rem;
+  color: var(--color-strong-cyan);
+}
+
+.reset-btn {
+  width: 100%;
+  height: 3.5rem;
+  border-radius: 0.5rem;
+  border: none;
+  background-color: var(--color-strong-cyan);
+  color: var(--color-dark-cyan);
+  font-size: 1.8rem;
+  cursor: pointer;
+}
+
+.reset-btn:hover {
+  background-color: var(--color-light-gray-cyan);
+}
+
+/* ##   MEDIA QUERIES   ## */
+/* Laptops and other bigger screens */
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 700px;
+    display: flex;
+    gap: 5rem;
+  }
+
+  .input-section {
+    flex: 1 0 40%;
+    padding: 2rem 0 1rem;
+  }
+  .calc-amount {
+    font-size: 3.2rem;
+  }
+  .totals {
+    flex: 1 0 40%;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+  .reset-btn {
+    margin-top: 6.7rem;
+  }
+}
+
+.hidden {
+  display: none;
+}

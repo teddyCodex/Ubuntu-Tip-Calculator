@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/skull-fill.png"
+    />
+    <link rel="stylesheet" href="styles.css" />
+
+    <title>Ubuntu Tip calculator app</title>
+  </head>
+  <body>
+    <header>
+      <h1>TIP SPLITTER</h1>
+    </header>
+
+    <main class="container">
+      <div class="input-section">
+        <!-- Bill input area -->
+        <label class="bill-label" for="bill"
+          >Bill <span id="bill" class="hidden">Can't be zero</span>
+          <input
+            class="bill-input"
+            type="number"
+            name="bill"
+            placeholder="0"
+            dir="rtl"
+          />
+          <img src="images/icon-dollar.svg" alt="" />
+        </label>
+
+        <!-- Tip selections -->
+        <div class="tip-buttons">
+          <p>Select Tip %</p>
+          <div class="selection-btns">
+            <button class="btn5per">5%</button>
+            <button class="btn10per">10%</button>
+            <button class="btn15per">15%</button>
+            <button class="btn25per">25%</button>
+            <button class="btn50per">50%</button>
+            <label for="custom">
+              <input
+                class="custom"
+                type="number"
+                name="custom"
+                placeholder="Custom"
+                dir="rtl"
+              />
+            </label>
+          </div>
+        </div>
+
+        <!-- Number of people sharing -->
+        <label class="sharers" for="sharers"
+          >Number of People <span id="span" class="hidden">Can't be zero</span>
+          <input
+            class="sharers-input"
+            type="number"
+            name="sharers"
+            placeholder="0"
+            dir="rtl"
+            min="1"
+          />
+          <img src="images/icon-person.svg" alt="" />
+        </label>
+      </div>
+
+      <div class="totals">
+        <div class="tip-per-person">
+          <div class="calc-title">
+            <p>Tip Amount</p>
+            <p>/ person</p>
+          </div>
+          <p id="tip-amount" class="calc-amount">$0.00</p>
+        </div>
+
+        <div class="total-per-person">
+          <div class="calc-title">
+            <p>Total</p>
+            <p>/ person</p>
+          </div>
+          <p id="total-amount" class="calc-amount">$0.00</p>
+        </div>
+
+        <button class="reset-btn">RESET</button>
+      </div>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
